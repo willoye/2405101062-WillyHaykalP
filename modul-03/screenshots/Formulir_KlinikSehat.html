@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Klinik Sehat</title>
+</head>
+<body>
+
+    <h1>FORMULIR PENDAFTARAN KLINIK SEHAT</h1>
+    <p>Silakan isi data diri dan keluhan Anda dengan benar.</p>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Data Pasien</legend>
+
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama"
+                   placeholder="Masukkan nama lengkap" required>
+            <br><br>
+
+            <label for="nik">NIK:</label><br>
+            <input type="text" id="nik" name="nik"
+                   placeholder="Masukkan NIK" maxlength="16"
+                   pattern="[0-9]{16}"
+                   title="NIK harus terdiri dari 16 angka" required>
+            <br><br>
+
+            <label for="tanggal_lahir">Tanggal Lahir:</label><br>
+            <input type="date" id="tanggal_lahir"
+                   name="tanggal_lahir" required>
+            <br><br>
+
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="laki" name="jenis_kelamin"
+                   value="Laki-laki" required>
+            <label for="laki">Laki-laki</label>
+
+            <input type="radio" id="perempuan" name="jenis_kelamin"
+                   value="Perempuan">
+            <label for="perempuan">Perempuan</label>
+            <br><br>
+
+            <label for="alamat">Alamat:</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="40"
+                      placeholder="Masukkan alamat lengkap"
+                      required></textarea>
+            <br><br>
+
+            <label for="telepon">Nomor Telepon:</label><br>
+            <input type="tel" id="telepon" name="telepon"
+                   placeholder="Contoh: 081234567890" required>
+            <br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"
+                   placeholder="Masukkan email">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informasi Pemeriksaan</legend>
+
+            <label for="poli">Poli Tujuan:</label><br>
+            <select id="poli" name="poli" required>
+                <option value="">-- Pilih Poli --</option>
+                <option value="Umum">Poli Umum</option>
+                <option value="Gigi">Poli Gigi</option>
+                <option value="Anak">Poli Anak</option>
+                <option value="Mata">Poli Mata</option>
+            </select>
+            <br><br>
+
+            <label for="tanggal_periksa">Tanggal Pemeriksaan:</label><br>
+            <input type="date" id="tanggal_periksa"
+                   name="tanggal_periksa" required>
+            <br><br>
+
+            <label for="keluhan">Keluhan Pasien:</label><br>
+            <textarea id="keluhan" name="keluhan" rows="5" cols="40"
+                      placeholder="Jelaskan keluhan yang dirasakan"
+                      required></textarea>
+            <br><br>
+
+            <label for="riwayat">Riwayat Penyakit:</label><br>
+            <textarea id="riwayat" name="riwayat" rows="3" cols="40"
+                      placeholder="Tuliskan jika ada"></textarea>
+            <br><br>
+
+            <label for="pembayaran">Metode Pembayaran:</label><br>
+            <select id="pembayaran" name="pembayaran" required>
+                <option value="">-- Pilih Pembayaran --</option>
+                <option value="Umum">Pembayaran Umum</option>
+                <option value="BPJS">BPJS Kesehatan</option>
+                <option value="Asuransi">Asuransi Lainnya</option>
+            </select>
+            <br><br>
+
+            <input type="checkbox" id="persetujuan"
+                   name="persetujuan" value="setuju" required>
+            <label for="persetujuan">
+                Saya menyatakan data yang diisi sudah benar.
+            </label>
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Daftar Pemeriksaan">
+        <input type="reset" value="Reset Formulir">
+    </form>
+
+</body>
+</html>
